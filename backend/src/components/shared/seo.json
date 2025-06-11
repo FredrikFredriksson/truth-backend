@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_shared_seos",
+  "info": {
+    "displayName": "SEO",
+    "description": "SEO metadata for content"
+  },
+  "options": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string",
+      "required": true,
+      "maxLength": 60
+    },
+    "metaDescription": {
+      "type": "text",
+      "required": true,
+      "maxLength": 160
+    },
+    "metaImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "metaRobots": {
+      "type": "string",
+      "regex": "^(index|noindex|none|all)\\s*(,\\s*(follow|nofollow))?$",
+      "default": "index, follow",
+      "required": false
+    },
+    "keywords": {
+      "type": "text",
+      "required": false
+    },
+    "canonicalURL": {
+      "type": "string",
+      "required": false,
+      "regex": "^https?:\\/\\/[\\S]+$"
+    }
+  }
+}
